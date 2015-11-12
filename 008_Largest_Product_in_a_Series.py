@@ -30,7 +30,8 @@ import sys
 
 if __name__ == '__main__':
     # read input filename
-    filename = sys.path[0].replace('\\','/') + '/input/008_Largest_Product_in_a_Series_Input.txt'
+    filename = sys.path[0].replace(
+        '\\', '/') + '/input/008_Largest_Product_in_a_Series_Input.txt'
     file = open(filename, 'r')
     n = ""
     for line in file.readlines():
@@ -42,19 +43,18 @@ if __name__ == '__main__':
     # initialize maximum product
     max_product = 0
     digits = ""
-    for i in range(len(str(n)) - (digits_int-1)):
+    for i in range(len(str(n)) - (digits_int - 1)):
         prod_digits = n[i]
         prod = int(prod_digits)
-        for j in range(i+1, i+digits_int):
+        for j in range(i + 1, i + digits_int):
             prod_digits += n[j]
             prod *= int(n[j])
         if (prod > max_product):
             digits = prod_digits
             max_product = prod
-    print digits, max_product
-    if (time.time() - start > 10):
-        raise Exception("Timeout: Running of script aborted.")
-        # break
+    # finalize running time
     stop = time.time()
     # print results
-    print "Running Time: \t %.2f sec" %(stop - start)
+    print "Consecutive Strings: \t %s" %digits
+    print "Maximum Product: \t %s" %max_product
+    print "Running Time:    \t %.2f sec" % (stop - start)
