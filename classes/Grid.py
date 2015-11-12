@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+# Conventions are according to NumPy Docstring.
 
 class Grid:
     """This grid classes represents a N by N grid represented with nested arrays/lists.
@@ -150,11 +150,6 @@ class Grid:
             The diagonal starting from the input indices and traversing
             in the specified direction until it hits an edge of the grid.
 
-        # Raises
-        # ------
-        # IndexError
-        #     when either the row or column input is out of bounds.
-
         """
         assert method == "down" or method == "up"
         diag = []
@@ -172,47 +167,6 @@ class Grid:
                 row_idx -= 1
                 col_idx += 1
         return diag
-
-    # def get_up_diagonal(self, row_idx, col_idx):
-    #     """Gets the upwards diagonal starting from the row and col input.
-    #
-    #     The input indices are zero-based.
-    #
-    #     Parameters
-    #     ----------
-    #     row_idx : int
-    #         The row index to be accessed.
-    #     col_idx : int
-    #         The column index to be accessed.
-    #
-    #     Returns
-    #     -------
-    #     List[<any type>]
-    #         The diagonal starting from the input indices and traversing upwards
-    #         until it hits an edge of the grid.
-    #
-    #     Raises
-    #     ------
-    #     IndexError
-    #         when either the row or column input is out of bounds.
-    #
-    #     """
-    #     if (row_idx >= self.get_nrow() or
-    #             col_idx >= self.get_ncol()):
-    #         raise IndexError("Out of bounds.")
-    #     # corner cases
-    #     elif (row_idx == 0 and col_idx == 0):
-    #         return [self.get_value(row_idx, col_idx)]
-    #     elif (row_idx == self.get_nrow() - 1 and col_idx == self.get_ncol() - 1):
-    #         return [self.get_value(row_idx, col_idx)]
-    #     else:
-    #         diag = []
-    #         while (row_idx < self.get_nrow() and
-    #                col_idx < self.get_ncol()):
-    #             diag.append(self.get_value(row_idx, col_idx))
-    #             row_idx += 1
-    #             col_idx += 1
-    #         return diag
 
     def get_value(self, row_idx, col_idx):
         """Return a value of the grid given the row and column input.
