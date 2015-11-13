@@ -7,6 +7,7 @@ What is the 10 001st prime number?
 import time
 import math
 
+
 def is_prime(n):
     """
     Assume that the input is larger than 1.
@@ -22,6 +23,7 @@ def is_prime(n):
                 return False
     return True
 
+
 def gen_primes_by_limit(limit):
     primes = [2]
     counter = 3
@@ -33,6 +35,7 @@ def gen_primes_by_limit(limit):
         counter += 2
     assert primes[-1] <= limit
     return primes
+
 
 def gen_primes_by_count(n):
     primes = [2]
@@ -52,4 +55,4 @@ if __name__ == '__main__':
     print gen_primes_by_count(10001)[-1]
     stop = time.time()
     # print results
-    print "Running Time: \t %.2f sec" %(stop - start)
+    print "Running Time: \t %.2f sec" % (stop - start)

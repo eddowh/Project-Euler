@@ -29,6 +29,8 @@ What is the greatest product of four adjacent numbers in the same direction (up,
 
 import time
 import sys
+import os
+sys.path.append(os.path.dirname(sys.path[0]))
 import operator
 from classes.Grid import Grid
 
@@ -102,7 +104,7 @@ def max_result(lst, num_adj, operator):
 
 if __name__ == '__main__':
     # read input filename
-    filename = sys.path[0].replace(
+    filename = os.path.dirname(sys.path[0]).replace(
         '\\', '/') + '/input/011_Largest_Product_in_a_Grid_Input.txt'
     file = open(filename, 'r')
     # parse as grid

@@ -26,11 +26,12 @@ Find the thirteen adjacent digits in the 1000-digit number that have the greates
 """
 
 import time
+import os
 import sys
 
 if __name__ == '__main__':
     # read input filename
-    filename = sys.path[0].replace(
+    filename = os.path.dirname(sys.path[0]).replace(
         '\\', '/') + '/input/008_Largest_Product_in_a_Series_Input.txt'
     file = open(filename, 'r')
     n = ""
