@@ -27,18 +27,13 @@ class Grid:
             where the nested lists exhibit the same length.
             This equates to each row containing the same number of columns.
 
-        Raises
-        ------
-        Exception
-            when number of columns differ among rows.
-
         """
-        if len(set([len(row) for row in grid])) != 1:
-            raise Exception("Invalid grid input.")
-        else:
-            self._grid = grid
-            self._nrow = len(grid)
-            self._ncol = len(grid[0])
+        # if len(set([len(row) for row in grid])) != 1:
+        #     raise Exception("Invalid grid input.")
+        # else:
+        self._grid = grid
+        self._nrow = len(grid)
+        self._ncol = len(grid[0])
 
     def __str__(self):
         """Return multi-line string representation of the grid."""

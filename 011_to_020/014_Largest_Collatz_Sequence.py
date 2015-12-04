@@ -31,7 +31,7 @@ if __name__ == '__main__':
         collatz_length = 0
         # we know that once the sequence number reaches a number below the starting,
         # it has already been calculated, so we extract the info from the cache
-        # hence the loop stopping once it reaches below the starting number
+        # hence the loop stopping once it reaches below the s`tarting number
         while (n != 1 and n >= i):
             collatz_length += 1
             if n % 2 == 0:
