@@ -189,17 +189,6 @@ class Date:
                         yearIncrementer):
             if isLeapYear(yr) and yr != otherDate.get_year():
                 days += 1
-        # # account for leap year date not being reached yet
-        # if isLeapYear(otherDate.get_year()):
-        #     if ((otherDate.get_month() == 2 and otherDate.get_day() <= 28) or
-        #             otherDate.get_month() < 2):
-        #         days -= 1
-        # if isLeapYear(self.get_year()):
-        #     if ((self.get_month() == 2 and self.get_day() == 29) or
-        #             self.get_month() > 2):
-        #         days -= 1
-        # print days
-        # account for months
         monthDiff = otherDate.get_month() - self.get_month()
         if monthDiff > 0:
             monthIncrementer = 1
