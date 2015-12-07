@@ -10,7 +10,7 @@ import time
 def main():
     # input values
     multiples = (3,5)
-    upper_limit = 5 * (10 ** 6)
+    upper_limit = 1000000
     # slow method
     slow_start = time.time()
     sum_multiples(multiples, upper_limit)
